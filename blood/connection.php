@@ -1,4 +1,6 @@
 <?php
+echo extension_loaded('mysqli') ? 'mysqli loaded' : 'mysqli NOT loaded';
+exit;
 $host = getenv("MYSQLHOST");
 $user = getenv("MYSQLUSER");
 $pass = getenv("MYSQLPASSWORD");
