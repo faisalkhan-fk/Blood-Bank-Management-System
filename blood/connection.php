@@ -8,6 +8,9 @@ $port = getenv("MYSQLPORT");
 $conn = mysqli_connect($host, $user, $pass, $dbname, $port);
 
 if (!$conn) {
-    die("Database Not Connected: " . mysqli_connect_error());
+    die("Connection Failed: " . mysqli_connect_error());
 }
+
+echo "Database Connected Successfully";
+exit;
 ?>
