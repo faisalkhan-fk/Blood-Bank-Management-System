@@ -1,4 +1,7 @@
 <?php
+echo "DONER LIST FILE LOADED";
+exit;
+
 session_start();
 ?>
 <!DOCTYPE html>
