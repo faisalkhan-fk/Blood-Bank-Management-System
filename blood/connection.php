@@ -1,11 +1,13 @@
 <?php
-$host="localhost";
-$user="u366501955_faisal";
-$pass= "Khan@7862230"; 
-$dbname= "u366501955_bank";
-$conn = mysqli_connect($host,$user,$pass,$dbname);
-if(!$conn)
-{
-    die("database Not connected". mysqli_connect_error());
+$host = getenv("MYSQLHOST");
+$user = getenv("MYSQLUSER");
+$pass = getenv("MYSQLPASSWORD");
+$dbname = getenv("MYSQLDATABASE");
+$port = getenv("MYSQLPORT");
+
+$conn = mysqli_connect($host, $user, $pass, $dbname, $port);
+
+if (!$conn) {
+    die("Database Not Connected: " . mysqli_connect_error());
 }
 ?>
