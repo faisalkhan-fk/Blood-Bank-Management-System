@@ -1,4 +1,13 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+echo "Step 1<br>";
+
+include "blood/connection.php";
+
+echo "Step 2<br>";
+exit;
 session_start();
 ?>
 <!DOCTYPE html>
@@ -18,18 +27,6 @@ session_start();
         <div class="row">
         <p class="h3" style="text-align: center;">Donor List</p>
         <?php 
-       include "blood/connection.php";
-       if (!$conn) {
-    die("Connection Failed: " . mysqli_connect_error());
-}
-
-echo "Database Connected<br>";
-
-$result = mysqli_query($conn, "SELECT COUNT(*) AS total FROM bbank");
-$row = mysqli_fetch_assoc($result);
-
-echo "Total Donors: " . $row['total'];
-exit;
         $sql5="select * from bbank where stats=1 order by id desc";
         $resultG=mysqli_query($conn,$sql5);
         if(mysqli_num_rows($resultG)>0)
