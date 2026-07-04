@@ -17,14 +17,13 @@ if(isset($_POST['name']) && isset($_POST['pass']))
     if(mysqli_num_rows($result) > 0)
     {
     $row = mysqli_fetch_assoc($result);
-        echo "Entered Password: " . $pass . "<br>";
-echo "Database Password: " . $row['password'];
-exit();
         if($pass==$row['password'])
         {
             $_SESSION['name'] = $row['name'];
             $_SESSION['pass'] = $row['pass'];
-            header('Location:admin.php');
+            echo "Login Successful";
+exit();
+            //header('Location:admin.php');
         }
         else
         {
