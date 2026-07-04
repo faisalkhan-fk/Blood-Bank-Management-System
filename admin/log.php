@@ -5,9 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 session_start();
 include "../blood/connection.php";
-echo "<pre>";
-print_r($_POST);
-exit();
 if(isset($_POST['name']) && isset($_POST['pass']))
 {
     $email = $_POST['name'];
@@ -15,6 +12,14 @@ if(isset($_POST['name']) && isset($_POST['pass']))
 
     $chackSQL="select * from admin where email='$email'";
     $result = mysqli_query($conn,$chackSQL);
+    $result = mysqli_query($conn, $chackSQL);
+
+if (!$result) {
+    die(mysqli_error($conn));
+}
+
+echo mysqli_num_rows($result);
+exit();
     if(mysqli_num_rows($result) > 0)
     {
     $row = mysqli_fetch_assoc($result);
