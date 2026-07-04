@@ -1,5 +1,4 @@
 <?php
-
 $host = "srv875.hstgr.io";
 $user = "u366501955_faisal";
 $password = "Khan@7862230";
@@ -11,4 +10,5 @@ if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+echo "Database Connected Successfully!";
 ?>
