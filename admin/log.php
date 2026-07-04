@@ -5,6 +5,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 session_start();
 include "../blood/connection.php";
+echo "<pre>";
+print_r($_POST);
+exit();
 if(isset($_POST['name']) && isset($_POST['pass']))
 {
     $email = $_POST['name'];
