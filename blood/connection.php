@@ -1,15 +1,14 @@
 <?php
-echo extension_loaded('mysqli') ? 'mysqli loaded' : 'mysqli NOT loaded';
-exit;
-$host = getenv("MYSQLHOST");
-$user = getenv("MYSQLUSER");
-$pass = getenv("MYSQLPASSWORD");
-$dbname = getenv("MYSQLDATABASE");
-$port = getenv("MYSQLPORT");
 
-$conn = mysqli_connect($host, $user, $pass, $dbname, $port);
+$host = "srv875.hstgr.io";
+$user = "u366501955_faisal";
+$password = "Khan@7862230";
+$database = "u366501955_bank";
 
-if (!$conn) {
-    die("Connection Failed: " . mysqli_connect_error());
+$con = mysqli_connect($host, $user, $password, $database);
+
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
 }
+
 ?>
