@@ -59,7 +59,7 @@ session_start();
         <?php 
        include "blood/connection.php";
         $sql5="select * from bbank where stats=1 order by id desc";
-        $resultG=mysqli_query($conn,$sql5);
+        $resultG=mysqli_query($con,$sql5);
         if(mysqli_num_rows($resultG)>0)
         {
             while($rowG=mysqli_fetch_assoc($resultG))
