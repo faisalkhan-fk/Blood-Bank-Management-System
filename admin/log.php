@@ -13,16 +13,13 @@ if(isset($_POST['name']) && isset($_POST['pass']))
     $chackSQL="select * from admin where email='$email'";
     $result = mysqli_query($conn,$chackSQL);
     $result = mysqli_query($conn, $chackSQL);
-
-if (!$result) {
-    die(mysqli_error($conn));
-}
-
-echo mysqli_num_rows($result);
-exit();
+    
     if(mysqli_num_rows($result) > 0)
     {
     $row = mysqli_fetch_assoc($result);
+        echo "Entered Password: " . $pass . "<br>";
+echo "Database Password: " . $row['password'];
+exit();
         if($pass==$row['password'])
         {
             $_SESSION['name'] = $row['name'];
