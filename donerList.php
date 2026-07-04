@@ -1,14 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-echo "Step 1<br>";
-
-include "blood/connection.php";
-
-echo "Step 2<br>";
-exit;
 session_start();
+include "blood/connection.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
