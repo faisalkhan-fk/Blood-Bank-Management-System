@@ -8,4 +8,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD sh -c "php -m && php -S 0.0.0.0:${PORT:-8080} index.php"
+CMD php -S 0.0.0.0:${PORT:-8080}
