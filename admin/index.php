@@ -15,7 +15,7 @@
     <input type="checkbox" id="check">
     <div class="login form">
       <header>Login</header>
-      <form action="log.php" method="post">
+      <form action="/admin/log.php" method="post">
         <input type="text" name="name" placeholder="Enter your email" required>
         <input type="password" name="pass" placeholder="Enter your password" required>
         <a href="#">Forgot password?</a>
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="registration form">
-      <form action="sign.php" method="post">
+      <form action="/admin/sign.php" method="post">
       <header>Signup</header>
 
       <input type="text" placeholder="Enter your Name" name="name">
