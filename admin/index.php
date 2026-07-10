@@ -19,12 +19,12 @@
         <input type="text" name="name" placeholder="Enter your email" required>
         <input type="password" name="pass" placeholder="Enter your password" required>
         <a href="#">Forgot password?</a>
-        <button  class="btn btn-success"  name="log">LogIN</button>
+        <button type="submit" class="btn btn-success"  name="log">LogIN</button>
 
       </form>
       <div class="signup">
         <span class="signup">Don't have an account?
-         <a for="check" href="#">Signup</a>
+         <label for="check">Signup</label>
         </span>
       </div>
     </div>
@@ -38,7 +38,7 @@
         <input type="text" placeholder="Enter your email" name="email">
         <input type="password" placeholder="Create a password" name="pass">
         <input type="password" placeholder="Confirm your password" name="cpass">
-        <button  class="btn btn-success"  name="sign" >Signup</button>
+        <button type="submit" class="btn btn-success"  name="sign" >Signup</button>
       </form>
       <div class="signup">
         <span class="signup">Already have an account?
